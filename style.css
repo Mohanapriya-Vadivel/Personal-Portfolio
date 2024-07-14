@@ -1,0 +1,320 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0, 1, 4, 0.3)),url("../images/background5.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    width:100%;
+    height:100vh;
+}
+.head-section{
+    display:flex;
+    justify-content: space-between;
+    margin:25px 60px;
+}
+.head-section .name{
+    font-size:25px;
+    font-family:cursive;
+    color: rgb(186, 234, 250);
+}
+.head-section .nav-bar li{
+    display:inline-block;
+    margin:10px 20px;
+    list-style: none;
+    position:relative;
+} 
+.head-section .nav-bar li a{
+    text-decoration: none;
+    font-size:20px;
+    color:#fff;
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.head-section .nav-bar li::after{
+    content:" ";
+    height:3px;
+    width:0;
+    background:#0b4768;
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    transition:0.5s;
+}
+.head-section .nav-bar li:hover::after{
+    width:100%;
+}
+.head-section .nav-bar .current a{
+    background-color: #0b4768;
+    color:white;
+    padding:20px 30px;
+    border-radius: 20px;
+}
+
+
+/*Home page styling elements start from here*/
+.intro{
+    border: 1px solid #83c1ff;
+    background: transparent;
+    border-radius: 30px;
+    margin:100px 50px 20px 50px;
+    width:65%;
+    word-spacing:5px;
+    padding:10px 15px;
+    font-size:22px;
+    color:#fff;
+    font-family:cursive;
+    box-shadow: 20px 15px 9px #83c1ff;
+    transition: 0.5s;
+}
+.intro h2{
+    
+    margin:10px;
+    
+}
+.intro h1{
+    margin:10px;
+    
+}
+.intro p{
+    margin:10px;
+    
+}
+.intro:hover{
+    background-color:#0b4768;
+    color: #fffbfb;
+}
+.btn{
+    margin:10px 40px;
+    
+}
+
+.introduction button{
+    color:#fff;
+    width:150px;
+    padding:15px 0;
+    text-align:center;
+    margin:10px 20px;
+    border-radius:25px;
+    font-weight:bold;
+    font-size:20px;
+    border: 1px solid #0a92dc;
+    background:transparent;
+    position:relative;
+    overflow:hidden;
+    box-shadow:10px 15px 15px #83c1ff;
+}
+.btn button a{
+    text-decoration: none;
+    color:#fff;
+}
+.introduction .btn span{
+   
+    background:#0a92dc;
+    height:100%;
+    width:0;
+    transition:.5s;
+    border-radius:25px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    z-index:-1;
+}
+.introduction .btn button:hover span{
+   
+    width:100%;
+    border:none;
+    
+}
+/*About page styling elements starts from here*/
+.about-container{
+    margin:100px 50px 0 50px;
+    width:100%;
+    position:relative;
+}
+.about-head{
+    margin:20px 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#fff;
+    font-size:25px;
+}
+.about-para{
+    margin:30px 10px 100px 10px;
+    color:#96e5ff;
+    line-height:40px;
+    word-spacing: 3px;
+    font-size:25px;
+    font-weight: bold;
+    padding:0 0 100px 0;
+}
+/*Skill page styling element starts from here*/
+.skills-content{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin:100px 100px 1000px 100px;
+}
+
+   
+.skills-intro p{
+    margin: 10px;
+     font-size:24px;
+    word-spacing: 4px;
+    color:rgb(235, 241, 245);
+}
+.flex-box{
+    display: flex;
+    justify-content: space-between;
+}
+.flex-item{
+    border:6px solid rgb(10, 112, 140);
+    background: transparent;
+    color:white;
+    padding: 20px 40px;
+    border-radius: 30px;
+    margin:10px;
+    box-shadow:20px 15px 15px rgb(35, 87, 198);
+}
+.flex-item:hover{
+    background-color:rgb(44, 115, 208);
+    color:#fff;
+}
+.flex-item h1{
+    font-size:30px;
+    margin:0 0 10px 0;
+}
+.flex-item p{
+    font-size:60px;
+    margin:40px 0;
+}
+.flex-item ul li{
+    list-style: none;
+    margin:10px;
+    font-size:20px;
+}
+.flex-item ul li span{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:20px;
+}
+/*Project page styling element starts from here*/
+.projects{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    grid-column-gap: 5px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.projects .project-item{
+    border-radius: 40px;
+    margin:20px 40px;
+    color:#fff;
+    padding:20px 25px;
+    line-height: 30px;
+    word-spacing: 4px;
+    font-weight: bold;
+    box-shadow:20px 25px 25px  #00749b;
+    justify-content: space-around;
+    background: transparent;
+    border: 3px solid #c6d9f0;
+}
+.project-item h1{
+    margin:20px 0;
+    font-size: 25px;
+}
+.project-item h2{
+    margin:20px 20px;
+}
+.project-item ul{
+    margin:20px 30px;
+}
+/*Contact page styling elements start from here*/
+.contact-container{
+    display:grid;
+    grid-template-columns: 70% 30%;
+    margin:50px;
+    color:#fff;
+}
+.contact{
+    margin:10px 30px;
+    background: transparent;
+    border-radius: 30px;
+    box-shadow:10px 15px 15px #99eeff;
+    line-height: 30px;
+    word-spacing: 4px;
+    padding:20px 50px;
+    border:3px solid  #99eeff;
+}
+.contact:hover{
+    background-color: rgb(5, 95, 151);
+}
+.contact-container .contact-ways{
+    font-family: cursive;
+    font-weight: medium;
+    
+}
+
+.contact-list{
+    align-items: center;
+    margin:50px  60px;
+    font-size:30px;
+    color:#fff;
+}
+.contact-list ul li{
+    list-style: none;
+    margin:10px;
+}
+.contact-list ul li a{
+    text-decoration:none;
+    color:#fff;
+}
+.contact-form{
+    border-radius: 30px;
+    box-shadow:10px 15px 15px rgb(3, 63, 88);
+    text-align: center;
+    margin:10px 20px;
+    padding:10px 30px;
+    color:rgb(0, 4, 7);
+    background-color: rgb(143, 189, 234);
+}
+.contact-form p{
+    font-size:20px;
+    font-weight: bold;
+    
+}
+.contact-form form{
+    line-height: 45px;
+}
+.contact-form form label{
+    font-size:25px;
+    font-weight: bold;
+    margin:50px 30px;
+}
+.contact-form form input,textarea{
+    border-radius:20px;
+    border:3px solid rgb(8, 52, 97);
+    height:30px;
+}
+.contact-form button{
+    border:none;
+    padding:10px 20px;
+    border-radius:20px;
+    background:rgb(8, 52, 97);
+    color:#fff;
+    font-size:20px;
+    font-weight:medium;
+    transition: 0.5s;
+}
+.contact-form button:hover{
+    box-shadow:2px 3px 4px rgba(0, 1, 4, 0.3);
+    opacity:0.6;
+}
+footer p{
+    bottom:0;
+    background-color: #032e5a;
+    padding :10px 20px;
+    color:#fff;
+    width:100%;
+    position:fixed;
+    text-align:center;
+}
