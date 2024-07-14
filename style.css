@@ -318,3 +318,32 @@ footer p{
     position:fixed;
     text-align:center;
 }
+/* Default styles */
+
+/* For devices up to 768px (phones) */
+@media (max-width: 768px) {
+ text-align:center;
+    justify-content:center;
+    align-items:center;
+}
+
+/* For devices between 768px and 1024px (tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS rules for tablets */
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+}
+
+/* For devices between 1024px and 1440px (small desktops) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  /* CSS rules for small desktops */
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+}
+
+/* For devices above 1440px (large desktops) */
+@media (min-width: 1440px) {
+  /* CSS rules for large desktops */
+}
