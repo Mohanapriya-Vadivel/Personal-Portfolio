@@ -322,28 +322,73 @@ footer p{
 
 /* For devices up to 768px (phones) */
 @media (max-width: 768px) {
- text-align:center;
-    justify-content:center;
-    align-items:center;
+    .head-section {
+        flex-direction: column;
+        align-items: center;
+        margin: 15px;
+    }
+
+    .head-section .nav-bar li {
+        margin: 5px 0;
+    }
+
+    .intro {
+        width: 90%;
+        margin: 50px auto;
+        font-size: 18px;
+    }
+
+    .flex-item {
+        flex: 1 1 100%; /* Stack items vertically */
+        margin: 10px 0;
+        padding: 15px; /* Adjust padding */
+    }
+
+    .projects {
+        grid-template-columns: 1fr; /* Single column for projects */
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
 }
 
 /* For devices between 768px and 1024px (tablets) */
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* CSS rules for tablets */
-    text-align:center;
-    justify-content:center;
-    align-items:center;
+    .head-section {
+        flex-direction: row;
+    }
+
+    .intro {
+        width: 80%; /* Slightly wider for tablets */
+        font-size: 20px;
+    }
+
+    .flex-item {
+        flex: 1 1 calc(50% - 20px); /* Two items per row */
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for projects */
+    }
 }
 
 /* For devices between 1024px and 1440px (small desktops) */
 @media (min-width: 1024px) and (max-width: 1440px) {
-  /* CSS rules for small desktops */
-    text-align:center;
-    justify-content:center;
-    align-items:center;
+    .intro {
+        width: 65%; /* Original width for larger tablets */
+    }
+
+    .flex-item {
+        flex: 1 1 calc(33% - 20px); /* Three items per row */
+    }
+
+    .projects {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for projects */
+    }
 }
 
 /* For devices above 1440px (large desktops) */
 @media (min-width: 1440px) {
-  /* CSS rules for large desktops */
+    /* Styles for large screens can remain as is */
 }
